@@ -25,7 +25,7 @@ const App = () => {
   const {showUserLogin, isSeller} = useAppContext()
 
   return(
-  <div className="text-default min-h-screen text-gray-700 bg-white">
+  <div className="text-default min-h-screen text-gray-700 bg-#c5d6d6">
     {isSellerPath ? null : <Navbar/> } 
     {showUserLogin ? <Login /> : null}
 

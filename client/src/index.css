@@ -1,16 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
 
 *{
     font-family: "Outfit", sans-serif;
 }
 
+/* Custom theme colors */
 @theme {
     --color-primary: #4fbf8b;
     --color-primary-dull: #44ae7c;
+    --color-bg: #c5d6d6; 
+}
+
+/* Set background for entire website */
+body {
+    background-color: var(--color-bg);
+    margin: 0;
+    padding: 0;
 }
 
 .no-scrollbar::-webkit-scrollbar{
     display: none;
 }
+
+
+
