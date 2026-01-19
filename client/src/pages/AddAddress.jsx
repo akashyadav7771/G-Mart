@@ -21,6 +21,7 @@ const InputField = ({type, placeholder, name, handleChange, address})=>(
 const AddAddress = () => {
 
     const {axios, user, navigate} = useAppContext();
+    
 
     const [address, setAddresses] = useState({
         firstName: '',
@@ -29,7 +30,7 @@ const AddAddress = () => {
         street: '',
         city: '',
         state: '',
-        zipcode: '',
+        pincode: '',
         country: '',
         phone: '',
     })
@@ -44,8 +45,16 @@ const AddAddress = () => {
 
     const onSubmitHandler = async(e)=>{
         e.preventDefault();
+
         try {
             const { data } = await axios.post('/api/address/add', { address });
+
+//                     const token = localStorage.getItem("token");
+//           if (!token) {
+//     toast.error("Please login first");
+//     navigate("/login");
+//     return;
+//   }
 
 
             if(data.success){
@@ -61,9 +70,14 @@ const AddAddress = () => {
     }
 
     useEffect(()=>{
+        // const token = localStorage.getItem("token");
+
         if(!user){
             navigate('/cart')
         }
+        // if(!token){
+        //     navigate('/login')
+        // }
     },[])
   return (
     <div className='mt-16 pb-16'>
@@ -88,7 +102,7 @@ const AddAddress = () => {
                     </div>
 
                      <div className='grid grid-cols-2 gap-4'>
-                    <InputField handleChange={handleChange} address={address} name='zipcode' type='number' placeholder='Zipcode'  />
+                    <InputField handleChange={handleChange} address={address} name='pincode' type='number' placeholder='Pincode'  />
                     <InputField handleChange={handleChange} address={address} name='country' type='text' placeholder='Country'  />
                     </div>
 

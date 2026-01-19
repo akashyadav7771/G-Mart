@@ -16,7 +16,7 @@ const Login = () => {
          event.preventDefault();
         
          const {data} = await axios.post(`/api/user/${state}`,{
-            name, email, password
+            name, email, password,
          });
          if (data.success){
             navigate('/')
@@ -28,7 +28,7 @@ const Login = () => {
 
         setShowUserLogin(false)
    } catch (error) {
-            toast.error(data.message)
+            toast.error(error.response?.data?.message || "Server error")
     
    }
     }
