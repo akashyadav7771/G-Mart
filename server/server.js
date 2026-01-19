@@ -21,7 +21,7 @@ await connectDB();
 await connectCloudinary()
 
 // Allow multiple origin
-const allowedOrigins = ['http://localhost:5173', 'https://g-mart-blond.vercel.app']
+const allowedOrigins = ['http://localhost:5173', "http://localhost:5174", 'https://g-mart-blond.vercel.app']
 
  app.post('/stripe', express.raw({type: 'application/json'}), stripeWebhooks)
 
