@@ -50,8 +50,10 @@ const sendMessage = async () => {
     }
 
     // AI mode
+    axios.defaults.withCredentials = true;
     const { data } = await axios.post(
       `${import.meta.env.VITE_BACKEND_URL}/api/support/chat`,
+      
       {
         message: userMessage,
       },
