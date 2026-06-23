@@ -68,7 +68,7 @@ io.on("connection", (socket) => {
     console.log(`User joined room: ${roomId}`);
   });
   socket.on("sendMessage", (data)=>{
-    console.log("📩 Message Received:", data);
+    console.log("Message Received:", data);
     io.to(data.roomId).emit("receiveMessage", data)
   })
 
