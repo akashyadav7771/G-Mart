@@ -55,7 +55,7 @@ const server = app.listen(port, () => {
 //socket oi
 export const io = new Server(server,{
   cors: {
-    origin:allowedOrigins, credentials: true ,
+    origin: "http://localhost:5173",
   },
 })
 io.on("connection", (socket) => {

@@ -17,58 +17,6 @@ const SupportWidget = () => {
   const [liveChat, setLiveChat] = useState(false);
   const [roomId, setRoomId] = useState("");
 
-//   const sendMessage = async () => {
-//     if (!input.trim()) return;
-
-//     const userMessage = input;
-
-//     setMessages((prev) => [
-//       ...prev,
-//       {
-//         sender: "user",
-//         text: userMessage,
-//       },
-//     ]);
-
-//     setInput("");
-//     setIsTyping(true);
-
-
-//     const sendLiveMessage = () => {
-
-//   socket.emit("sendMessage", {
-//     roomId: "akash-room",
-//     sender: "customer",
-//     message: input,
-//   });
-
-// };
-   
-
-//     try {
-//       const { data } = await axios.post(
-//         "http://localhost:4000/api/support/chat",
-//         {
-//           message: userMessage,
-//         },
-//         {
-//           headers: { token },
-//         },
-//       );
-
-//       setMessages((prev) => [
-//         ...prev,
-//         {
-//           sender: "bot",
-//           text: data.reply,
-//         },
-//       ]);
-//     } catch (error) {
-//       console.log(error);
-//     } finally {
-//       setIsTyping(false);
-//     }
-//   };
 
 
 const sendMessage = async () => {
