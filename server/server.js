@@ -13,7 +13,6 @@ import productRouter from "./routes/productRoute.js";
 import sellerRouter from "./routes/sellerRoute.js";
 import supportRouter from "./routes/supportRoute.js";
 import userRouter from "./routes/userRoute.js";
-import "./socket/socket.js";
 
 const app = express();
 const port = process.env.PORT || 4000;
