@@ -28,7 +28,7 @@ await connectCloudinary();
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
-  "https://g-mart-hejb.onrender.com/",
+  "https://g-mart-blond.vercel.app",
 ];
 
 app.post("/stripe", express.raw({ type: "application/json" }), stripeWebhooks);
@@ -56,6 +56,7 @@ const server = app.listen(port, () => {
 export const io = new Server(server,{
   cors: {
     origin: allowedOrigins,
+     methods: ["GET", "POST"],
     credentials: true,
   },
 })
