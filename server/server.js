@@ -28,7 +28,7 @@ await connectCloudinary();
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
-  "https://g-mart-blond.vercel.app",
+  "https://g-mart-hejb.onrender.com/",
 ];
 
 app.post("/stripe", express.raw({ type: "application/json" }), stripeWebhooks);

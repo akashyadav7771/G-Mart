@@ -50,8 +50,9 @@ const sendMessage = async () => {
     }
 
     // AI mode
+    const API = import.meta.env.VITE_BACKEND_URL;
     const { data } = await axios.post(
-      "http://localhost:4000/api/support/chat",
+      `${API}/api/support/chat`, data,
       {
         message: userMessage,
       },
