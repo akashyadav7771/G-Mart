@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { useAppContext } from "../context/AppContext";
 import { Link, useParams } from "react-router-dom";
 import { assets } from "../assets/assets";
-import ProductCard  from "../components/ProductCard";
+import ProductCard from "../components/ProductCard";
+import { useAppContext } from "../context/AppContext";
 
 const ProductDetails = () => {
 
@@ -13,6 +13,8 @@ const {id} = useParams()
     const [relatedProducts, setRelatedProducts] = useState([]);
     const [thumbnail, setThumbnail] = useState(null);
     const product = products.find((item)=> item._id === id);
+
+    console.log(currency);
 
     useEffect(()=>{
         if(products.length > 0 ){

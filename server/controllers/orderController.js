@@ -1,10 +1,10 @@
 
 
 //UPDATE VIRSION OF CODE
-import Product from "../models/Product.js";
+import stripe from "stripe";
 import Order from "../models/Order.js";
-import stripe from "stripe"
-import User from "../models/User.js"
+import Product from "../models/Product.js";
+import User from "../models/User.js";
 
 // ---------------- Place Order COD ----------------
 export const placeOrderCOD = async (req, res) => {
@@ -225,3 +225,18 @@ export const getAllOrders = async (req, res) => {
     return res.json({ success: false, message: error.message });
   }
 };
+
+
+// ---------------- Cancel Orders (Admin / Seller) ----------------
+
+export const cancelOrder = async(req,resp)=>{
+  try {
+    const {id} = req.params;
+    const orders =await Order.findByIdAndUpdate(id,
+    {status:"Cancelled"}
+    );
+    resp.json({success:true})
+  } catch (error) {
+    return resp.json({success:false, message:error.message});
+  }
+}
