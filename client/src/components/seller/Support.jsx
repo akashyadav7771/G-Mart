@@ -46,7 +46,7 @@ const sendReply = () => {
 
   return (
 
-  <div className="h-screen flex bg-gradient-to-br from-sky-50 via-white to-violet-50 w-full max-w-4xl h-[85vh] shadow-2xl overflow-hidden flex">
+  <div className=" flex bg-gradient-to-br from-sky-50 via-white to-violet-50 w-full max-w-4xl h-[92vh] shadow-2xl overflow-hidden flex">
 
     {/* Sidebar */}
     <div className="w-72 bg-white border-r border-gray-200">

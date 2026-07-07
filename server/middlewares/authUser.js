@@ -4,7 +4,6 @@ import jwt from 'jsonwebtoken';
 
 const authUser = async (req, res, next) => {
     const { token } = req.cookies;
-    console.log(token);
     
         // const token = localStorage.getItem("token");
 

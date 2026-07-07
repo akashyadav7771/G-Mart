@@ -106,7 +106,7 @@ const MyOrders = () => {
                   </p>
                 </div>
 
-                {/* Status + Button */}
+                {/* Status */}
                 <div className="flex flex-col items-start md:items-end gap-3">
                   <span
                     className={`px-4 py-1 rounded-full text-sm font-medium ${
